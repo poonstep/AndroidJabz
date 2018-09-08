@@ -5,6 +5,8 @@ import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import org.parceler.Parcels;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import demo.arit.com.dmo3.model.User;
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         User user = new User();
         user.setFirstname("John");
 
-        bundle.putParcelable();
+        bundle.putParcelable("user", Parcels.wrap(user));
+        intent.putExtra(MESSAGE, bundle);
 
         startActivity(intent);
     }
