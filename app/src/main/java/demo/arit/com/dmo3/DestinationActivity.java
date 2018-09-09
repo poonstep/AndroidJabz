@@ -25,9 +25,10 @@ public class DestinationActivity extends AppCompatActivity {
 
 //        String message = getIntent().getStringExtra(MainActivity.MESSAGE);
 
-        Parcelable parcelable = getIntent().getParcelableExtra(MainActivity.MESSAGE);
-        Bundle bundle = Parcels.unwrap()
-        User user = Parcels.unwrap(parcelable);
+        Bundle bundle = getIntent().getBundleExtra((MainActivity.MESSAGE));
+//        Parcelable parcelable = getIntent().getParcelableExtra(MainActivity.MESSAGE);
+
+        User user = Parcels.unwrap(bundle.getParcelable("user"));
 
 //        tvMessage.setText(message);
         tvMessage.setText(user.getFirstname());
