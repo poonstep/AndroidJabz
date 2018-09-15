@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
+        <import type="java.math.BigDecimal"></import>
         <import type="mvp.arit.com.mvvm.DecimalUtil"></import>
-        <import type=""
+        <import type="android.view.View"></import>
         <variable name="qty" type="int"></variable>
         <variable name="user" type="mvp.arit.com.mvvm.User"></variable>
         <variable name="handler" type="mvp.arit.com.mvvm.ClickHandler"></variable>
@@ -33,7 +34,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{user.firstname}"
+        android:text="@{(user.age.intValue() > 20) ? View.VISIBLE : View.GONE }"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

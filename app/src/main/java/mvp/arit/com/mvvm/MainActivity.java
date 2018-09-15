@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import mvp.arit.com.mvvm.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements ClickHandler{
+public class MainActivity extends AppCompatActivity implements ClickHandler {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
